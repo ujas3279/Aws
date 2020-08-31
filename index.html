@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+	<script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/499416/TweenLite.min.js"></script>
+	<script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/499416/EasePack.min.js"></script>
+	<script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/499416/demo.js"></script>
+	<style type="text/css">
+	.large-header {
+   position: relative;
+   width: 100%;
+   background: #111;
+   overflow: hidden;
+   background-size: cover;
+   background-position: center center;
+   z-index: 1;
+}
+
+.demo .large-header {
+   background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/499416/demo-bg.jpg");
+}
+
+.main-title {
+   position: absolute;
+   margin: 0;
+   padding: 0;
+   color: #F9F1E9;
+   text-align: center;
+   top: 50%;
+   left: 50%;
+   -webkit-transform: translate3d(-50%, -50%, 0);
+   transform: translate3d(-50%, -50%, 0);
+}
+
+.demo .main-title {
+   text-transform: uppercase;
+   font-size: 4.2em;
+   letter-spacing: 0.1em;
+}
+
+.main-title .thin {
+   font-weight: 200;
+}
+
+@media only screen and (max-width: 768px) {
+   .demo .main-title {
+      font-size: 3em;
+   }
+}
+    p{
+        padding: 20px;
+        font: 20px sans-serif;
+        background: khaki;
+    }
+</style>
+<script type="text/javascript">
+$(document).ready(function(){
+    $("p").click(function(){
+        $(this).slideToggle();
+    });
+    $("button").click(function(){
+          $("p").slideToggle();
+    });
+});
+</script>
+</head>
+<body>
+	<iframe height="188" style="width: 100%;" scrolling="no" title="Animated Background Header" src="//codepen.io/jasperlachance/embed/QNMwBg/?height=188&theme-id=light&default-tab=js,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href='https://codepen.io/jasperlachance/pen/QNMwBg/'>Animated Background Header</a> by Jasper LaChance
+  (<a href='https://codepen.io/jasperlachance'>@jasperlachance</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
+	<div class="container demo">
+   <div class="content">
+      <div id="large-header" class="large-header">
+         <canvas id="demo-canvas"></canvas>
+         <h1 class="main-title"><span class="thin">Explore</span> Space</h1>
+      </div>
+   </div>
+</div>
+	<p>click here</p>
+	<p>click here</p>
+	<p>click here</p>
+	<button>Click Here for view</button>
+</body>
+</html>
